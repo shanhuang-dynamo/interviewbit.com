@@ -7,7 +7,15 @@ If so, return the integer. If not, return -1.
 If there are multiple solutions, return any one.
 
 ---
+## Discussions
+Assume that we maintain 2 elements with their counts as we traverse along the array.
 
+When we encounter a new element, there are 3 cases possible :
+- We don’t have 2 elements yet. So add this to the list with count as 1.
+- This element is different from the existing 2 elements. As we said before, we have 3 distinct numbers now. Removing them does not change the answer. So decrement 1 from count of 2 existing elements. If their count falls to 0, obviously its not a part of 2 elements anymore.
+- The new element is same as one of the 2 elements. Increment the count of that element.
+
+Consequently, the answer will be one of the 2 elements left behind. If they are not the answer, then there is no element with count > N / 3.
 ## My Solution
 ```java 
 public class Solution {
