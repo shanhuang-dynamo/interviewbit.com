@@ -1,4 +1,4 @@
-# N/3  Repeat NumberBookmark
+# N/3 Repeat Number
 ---
 You’re given a read only array of n integers. Find out if any integer occurs more than n/3 times in the array in linear time and constant additional space.
 
